@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ledi_linear1"
+        android:layout_width="306dp"
+        android:layout_height="278dp"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="306dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <Button
+                android:id="@+id/ledi_c1_btn"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/ledi_title_bg" />
+            <Button android:id="@+id/zhuce_btn_user"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:background="@drawable/ledi_register_title_down"
+                android:scaleType="fitXY"
+                    android:text="注册账号"/>
+            <!-- 
+            <RelativeLayout
+                android:id="@+id/zhuce_btn_user"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:background="@drawable/ledi_register_title_down"
+                 >
+
+                <TextView
+                    android:id="@+id/tt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="38dp"
+                    android:scaleType="fitXY"
+                    android:text="注册账号"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+             -->
+        </LinearLayout>
+
+        <com.ledi.view.CustomViewPager
+            android:id="@+id/ledi_mainpager_viewPager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:background="@drawable/ledi_bg"/>
+    </LinearLayout>
+
+</FrameLayout>

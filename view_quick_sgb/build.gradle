@@ -1,0 +1,100 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        //开发环境
+        develop {
+            dimension "default"
+            buildConfigField "String", "CHANNEL", "\"pf_quick\""
+            buildConfigField "String", "SDK", "\"newquick\""
+            buildConfigField "String", "GAMENAME", "\"三国帮\""
+            buildConfigField "String", "APPID", "\"57058003656289535355473476693249\""
+            buildConfigField "String", "APPKEY", "\"95475411\""
+            buildConfigField "int", "GAMENAMEID", "9"
+            buildConfigField "boolean", "ISWHOLEPKG", "false"
+            buildConfigField "String", "GAMEVERSION", "\"1.3.01\""
+            buildConfigField "int", "GAMEVERSIONCODE", "1301"
+        }
+
+        //生产环境
+        product {
+            dimension "default"
+            buildConfigField "String", "CHANNEL", "\"pf_quick\""
+            buildConfigField "String", "SDK", "\"newquick\""
+            buildConfigField "String", "GAMENAME", "\"三国帮\""
+            buildConfigField "String", "APPID", "\"57058003656289535355473476693249\""
+            buildConfigField "String", "APPKEY", "\"95475411\""
+            buildConfigField "int", "GAMENAMEID", "9"
+            buildConfigField "boolean", "ISWHOLEPKG", "false"
+            buildConfigField "String", "GAMEVERSION", "\"1.3.01\""
+            buildConfigField "int", "GAMEVERSIONCODE", "1301"
+        }
+        //开发环境
+        develop_all {
+            dimension "default"
+            buildConfigField "String", "CHANNEL", "\"pf_quick\""
+            buildConfigField "String", "SDK", "\"newquick\""
+            buildConfigField "String", "GAMENAME", "\"三国帮\""
+            buildConfigField "String", "APPID", "\"57058003656289535355473476693249\""
+            buildConfigField "String", "APPKEY", "\"95475411\""
+            buildConfigField "int", "GAMENAMEID", "9"
+            buildConfigField "boolean", "ISWHOLEPKG", "true"
+            buildConfigField "String", "GAMEVERSION", "\"1.3.01\""
+            buildConfigField "int", "GAMEVERSIONCODE", "1301"
+        }
+        //生产环境
+        product_all {
+            dimension "default"
+            buildConfigField "String", "CHANNEL", "\"pf_quick\""
+            buildConfigField "String", "SDK", "\"newquick\""
+            buildConfigField "String", "GAMENAME", "\"三国帮\""
+            buildConfigField "String", "APPID", "\"57058003656289535355473476693249\""
+            buildConfigField "String", "APPKEY", "\"95475411\""
+            buildConfigField "int", "GAMENAMEID", "9"
+            buildConfigField "boolean", "ISWHOLEPKG", "true"
+            buildConfigField "String", "GAMEVERSION", "\"1.3.01\""
+            buildConfigField "int", "GAMEVERSIONCODE", "1301"
+        }
+    }
+
+    sourceSets {
+        main() {
+            jniLibs.srcDirs = ['libs']
+        }
+        develop_all {
+            assets.srcDirs = [rootProject.ext.androidAssetsFile['copyToPath']]
+        }
+        product_all {
+            assets.srcDirs = [rootProject.ext.androidAssetsFile['copyToPath']]
+        }
+    }
+    //项目中有引用aar文时，需要添加
+    repositories {
+        flatDir {
+            dirs 'libs', '../sdk_quick/libs'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api project(':sdk_quick')
+}

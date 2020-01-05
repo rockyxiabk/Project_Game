@@ -1,0 +1,28 @@
+include ':app_main'
+include ':tencent_x5'
+
+//sdk
+include ':sdk_free'
+include ':sdk_free_tracking'
+include ':sdk_quick'
+include ':sdk_maoer'
+include ':sdk_44755'
+
+//view
+include ':view_ziyouios_gcsg'
+include ':view_ziyou_gcsg'
+
+include ':view_quick_dxx'
+include ':view_quick_xyjz'
+include ':view_quick_bzsg'
+include ':view_quick_sgl'
+include ':view_quick_ltcj'
+include ':view_quick_sgzn'
+include ':view_quick_sgb'
+include ':view_quick_sgzry'
+
+//maoer
+include ':view_maoer_djs'
+
+//44755
+include ':view_44755_bzsg'

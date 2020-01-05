@@ -1,0 +1,17 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bzy.view">
+
+    <application>
+        <!--sdk start-->
+        <meta-data
+            android:name="yl_appid"
+            android:value="107065331" />
+        <meta-data
+            android:name="yl_channelid"
+            android:value="10000" />
+        <meta-data
+            android:name="yl_platform_id"
+            android:value="0" />
+        <!--sdk end-->
+    </application>
+</manifest>

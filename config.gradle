@@ -1,0 +1,35 @@
+ext {
+    android = [
+            compileSdkVersion   : 26,
+            buildToolsVersion   : '26.0.2',
+            applicationId       : 'com.bzy.game',
+            applicationIdgcsg   : 'com.bzy.game.gcsg',
+            applicationIdgcsgios: 'com.allu.gcsg',
+            applicationIddxx    : 'com.bzy.game.dxx',
+            applicationIdsgl    : 'com.bzy.game.sgl',
+            applicationIdbzsg   : 'com.bzy.game.bzsg',
+            applicationIdxyjz   : 'com.bzy.game.xyjz',
+            applicationIdsgb    : 'com.bzy.game.sgb',
+            applicationIdsgzn   : 'com.bzy.game.sgzn',
+            applicationIdltcj   : 'com.bzy.game.ltcj',
+            applicationIdsgzry  : 'com.bzy.game.sgzry',
+            applicationIddjs    : 'com.bzy.game.djs',
+            applicationIdqtbzsg : 'com.baozousanguo.qt',
+            minSdkVersion       : 16,
+            targetSdkVersion    : 19,
+            versionCode         : 203,
+            versionName         : '2.0.3',
+            defaultPublishConfig: 'release',
+            publishNonDefault   : true
+    ]
+    dependencies = [
+            "appcompat-v7"  : 'com.android.support:appcompat-v7:26.1.0',
+            "support-v4"    : 'com.android.support:support-v4:26.1.0',
+            "support-design": 'com.android.support:design:+',
+            "junit"         : 'junit:junit:4.12',
+            "gson"          : 'com.google.code.gson:gson:2.8.5',
+            "okhttp"        : 'com.squareup.okhttp:okhttp:2.5.0',
+            "bugly"         : 'com.tencent.bugly:crashreport_upgrade:latest.release',
+            "bugly-native"  : 'com.tencent.bugly:nativecrashreport:latest.release'
+    ]
+}

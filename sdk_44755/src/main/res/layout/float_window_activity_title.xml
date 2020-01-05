@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#329BD8"
+     >
+     
+<TextView 
+    android:id="@+id/float_window_title_text_msg"
+    android:layout_width="wrap_content"
+    android:layout_height="48dp"
+     android:gravity="center"
+     android:textSize="18sp"
+     android:textColor="#FFFFFF"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+     android:text="@string/float_window_gift"
+    />
+
+<LinearLayout android:id="@+id/float_window_title_btn_backgame"
+        android:layout_width="30dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12dp"
+        android:gravity="center_vertical"
+        android:background="@color/float_window_transparent"
+        android:orientation="vertical"
+        
+        android:onClick="back$onclick">
+    <ImageView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ledi_pay_back"/>
+</LinearLayout>
+    <Button
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12dp"
+        android:background="@color/float_window_transparent"
+        android:gravity="center"
+        android:onClick="back$onclick"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:text="@string/float_window_backgame" />
+
+</RelativeLayout>

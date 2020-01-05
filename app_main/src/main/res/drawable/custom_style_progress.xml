@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@android:id/background">
+        <clip>
+            <scale
+                android:drawable="@drawable/progress_bg"
+                android:scaleWidth="100%" />
+        </clip>
+    </item>
+
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <scale
+                android:drawable="@drawable/custom_shape_progress"
+                android:scaleWidth="100%" />
+        </clip>
+    </item>
+
+    <item android:id="@android:id/progress">
+        <clip>
+            <scale
+                android:drawable="@drawable/progress"
+                android:scaleWidth="100%" />
+        </clip>
+    </item>
+</layer-list>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="304dp"
+    android:layout_height="266.5dp"
+    android:orientation="vertical" 
+    android:background="@drawable/ledi_login_declare_tu">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/declare_phone_qiut_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ledi_login_declare_phone_title" />
+
+        <Button
+            android:id="@+id/declare_phone_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginRight="22.5dp"
+            android:background="@drawable/ledi_login_declare_phone_sure" />
+
+        <Button
+            android:id="@+id/declare_phone_quit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/declare_phone_sure"
+            android:layout_alignBottom="@+id/declare_phone_sure"
+            android:layout_marginRight="13.5dp"
+            android:layout_toLeftOf="@+id/declare_phone_sure"
+            android:background="@drawable/ledi_login_declare_phone_qiut" />
+
+    </RelativeLayout>
+
+</LinearLayout>

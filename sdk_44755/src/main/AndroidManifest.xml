@@ -1,0 +1,121 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.bzy.sdk">
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_LOGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- doudoud -->
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIMAX_STATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <application>
+        <!-- sdk activity注册 -->
+        <activity
+            android:name="com.ledi.activity.BuyRechargeActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ledi.activity.BuyRechargeActivity2"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ledi.activity.BuyActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ledi.activity.BuyRechargeDialogActivity"
+            android:theme="@style/ledi_myDialogTheme" />
+        <activity
+            android:name="com.ledi.activity.RealName"
+            android:theme="@style/Float.Window.Theme.NoTitle.FullScreen"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ledi.activity.RealNameSure"
+            android:theme="@style/Float.Window.Theme.NoTitle.FullScreen"
+            android:screenOrientation="portrait" />
+        <!-- 悬浮窗 -->
+        <activity
+            android:name="com.ledi.floatwindow.activity.AccountCenterActivitypwd"
+            android:theme="@style/Float.Window.Theme.NoTitle.FullScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ledi.floatwindow.activity.AccountCenterActivityphone"
+            android:theme="@style/Float.Window.Theme.NoTitle.FullScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ledi.floatwindow.activity.ScreenShotActivity"
+            android:theme="@style/Float.Window.Theme.NoTitle.screenshot" />
+        <activity
+            android:name="com.ledi.floatwindow.activity.PlatformCoinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Float.Window.Theme.NoTitle.FullScreen" />
+        <activity
+            android:name="com.ledi.floatwindow.activity.AccountCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ledi.floatwindow.activity.MoreGamesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Float.Window.Theme.NoTitle.FullScreen" />
+        <activity
+            android:name="com.ledi.floatwindow.activity.ServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Float.Window.Theme.NoTitle.FullScreen" />
+
+        <receiver android:name="com.ledi.service.BootSystemReceiver" />
+        <service android:name="com.ledi.service.NotificationService" />
+        <!-- 渠道商编号，接入时候不需要修改。 -->
+        <meta-data
+            android:name="TuiguangID"
+            android:value="0" />
+        <meta-data
+            android:name="BaiduMobAd_CHANNEL"
+            android:value="Test" />
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="1bee90ee25" />
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind" >
+        </activity>
+        <!-- alipay sdk end -->
+    </application>
+</manifest>

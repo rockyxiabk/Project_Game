@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/float_window_grey"
+    android:orientation="vertical"
+    
+    android:paddingTop="20dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageSwitcher
+            android:layout_width="10dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/ledi_login_user_password_edit" />
+
+        <EditText
+            android:id="@+id/float_window_account_textview_account_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="11dp"
+            android:layout_weight="24"
+            android:background="@null"
+            android:hint="@string/ledi_input_password2"
+            android:paddingRight="10dp"
+            android:textColorHint="@color/float_window_hint_grey"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#00000000" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageSwitcher
+            android:layout_width="10dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/ledi_login_user_password_edit" />
+
+        <EditText
+            android:id="@+id/float_window_account_edittext_new_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="11dp"
+            android:layout_weight="24"
+            android:background="@null"
+            android:hint="@string/ledi_input_new_password_code"
+            android:inputType="textPassword"
+            android:paddingRight="10dp"
+            android:password="true"
+            android:textColorHint="@color/float_window_hint_grey"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#00000000" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageSwitcher
+            android:layout_width="10dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/ledi_login_user_password_edit" />
+
+        <EditText
+            android:id="@+id/float_window_account_edittext_new_pwd2"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="11dp"
+            android:layout_weight="24"
+            android:background="@null"
+            android:hint="@string/ledi_password_confirm_input"
+            android:inputType="textPassword"
+            android:paddingRight="10dp"
+            android:password="true"
+            android:textColorHint="@color/float_window_hint_grey"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/float_window_account_modify_pwd_btn_sure"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ledi_login_selector"
+        android:text="确定"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:textSize="18sp" />
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app_main" />
+            <option value="$PROJECT_DIR$/sdk_44755" />
+            <option value="$PROJECT_DIR$/sdk_free" />
+            <option value="$PROJECT_DIR$/sdk_free_tracking" />
+            <option value="$PROJECT_DIR$/sdk_maoer" />
+            <option value="$PROJECT_DIR$/sdk_quick" />
+            <option value="$PROJECT_DIR$/tencent_x5" />
+            <option value="$PROJECT_DIR$/view_44755_bzsg" />
+            <option value="$PROJECT_DIR$/view_maoer_djs" />
+            <option value="$PROJECT_DIR$/view_quick_bzsg" />
+            <option value="$PROJECT_DIR$/view_quick_dxx" />
+            <option value="$PROJECT_DIR$/view_quick_ltcj" />
+            <option value="$PROJECT_DIR$/view_quick_sgb" />
+            <option value="$PROJECT_DIR$/view_quick_sgl" />
+            <option value="$PROJECT_DIR$/view_quick_sgzn" />
+            <option value="$PROJECT_DIR$/view_quick_sgzry" />
+            <option value="$PROJECT_DIR$/view_quick_xyjz" />
+            <option value="$PROJECT_DIR$/view_ziyou_gcsg" />
+            <option value="$PROJECT_DIR$/view_ziyouios_gcsg" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+        <option name="testRunner" value="PLATFORM" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

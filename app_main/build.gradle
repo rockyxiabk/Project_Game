@@ -1,0 +1,145 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    defaultConfig {
+        applicationId rootProject.ext.android["applicationId"]
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7', 'x86', 'x86_64'
+        }
+    }
+
+    signingConfigs {
+        relealse {
+            storeFile file("../key/release.jks")
+            storePassword "123456"
+            keyAlias "release"
+            keyPassword "123456"
+        }
+        debug {
+            storeFile file("../key/release.jks")
+            storePassword "123456"
+            keyAlias "release"
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled true
+            signingConfig signingConfigs.relealse
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled false
+            signingConfig signingConfigs.relealse
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            variant.productFlavors.each { flavor ->
+                def project = variant.applicationId
+                def separator = "_"
+                def buildType = variant.variantData.variantConfiguration.buildType.name
+                def versionName = variant.versionCode
+                def date = new Date()
+                def formattedDate = date.format('yyyyMMddHHmm')
+
+                def apkName = project + separator + "v" + versionName + separator + buildType + separator + flavor.name + ".apk"
+                if (buildType == "release") {
+                    apkName = project + separator + "v" + versionName + separator + buildType + separator + flavor.name + separator + formattedDate + ".apk"
+                }
+                output.outputFileName = apkName
+            }
+        }
+    }
+
+    flavorDimensions "default"//版本维度分析,暂时使用不到
+
+    productFlavors {
+        //开发环境
+        develop {
+            dimension "default"
+            applicationId rootProject.ext.android["applicationIddjs"]
+            buildConfigField "String", "INDEX", "\"http://test.mobile.zj2460.com/dwsgjspservice/common/apkindex.jsp?pf=\""
+            buildConfigField "String", "SERVIVEIP", "\"http://test.web.zj2460.com/dwsg_gm/app/\""
+        }
+        //生产环境
+        product {
+            dimension "default"
+            applicationId rootProject.ext.android["applicationIddjs"]
+            buildConfigField "String", "INDEX", "\"http://auth.mobile.zj2460.com/dwsgjspservice/common/apkindex.jsp?pf=\""
+            buildConfigField "String", "SERVIVEIP", "\"http://gm.mobile.zj2460.com/dwsg_gm/app/\""
+        }
+        //开发环境整包
+        develop_all {
+            dimension "default"
+            applicationId rootProject.ext.android["applicationIddjs"]
+            buildConfigField "String", "INDEX", "\"http://test.mobile.zj2460.com/dwsgjspservice/common/apkindex.jsp?pf=\""
+            buildConfigField "String", "SERVIVEIP", "\"http://test.web.zj2460.com/dwsg_gm/app/\""
+        }
+        //生产环境整包
+        product_all {
+            dimension "default"
+//            applicationId rootProject.ext.android["applicationIdgcsgios"]
+//            applicationId rootProject.ext.android["applicationIdxyjz"]
+//            applicationId rootProject.ext.android["applicationIddxx"]
+//            applicationId rootProject.ext.android["applicationIdbzsg"]
+//            applicationId rootProject.ext.android["applicationIdsgl"]
+//            applicationId rootProject.ext.android["applicationIdsgb"]
+//            applicationId rootProject.ext.android["applicationIdsgzn"]
+//            applicationId rootProject.ext.android["applicationIdltcj"]
+//            applicationId rootProject.ext.android["applicationIdsgzry"]
+            applicationId rootProject.ext.android["applicationIddjs"]
+//            applicationId rootProject.ext.android["applicationIdqtbzsg"]
+            buildConfigField "String", "INDEX", "\"http://auth.mobile.zj2460.com/dwsgjspservice/common/apkindex.jsp?pf=\""
+            buildConfigField "String", "SERVIVEIP", "\"http://gm.mobile.zj2460.com/dwsg_gm/app/\""
+        }
+    }
+
+    sourceSets {
+        main() {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    //项目中有引用aar文时，需要添加
+    repositories {
+        flatDir {
+            dirs 'libs', '../sdk_quick/libs', '../sdk_free/libs', '../sdk_maoer/libs', '../sdk_44755/libs'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation rootProject.ext.dependencies["bugly"]
+    implementation rootProject.ext.dependencies["bugly-native"]
+//        implementation project(':view_quick_xyjz')
+    //    implementation project(':view_quick_dxx')
+        implementation project(':view_quick_bzsg')
+    //    implementation project(':view_quick_sgl')
+    //    implementation project(':view_quick_sgb')
+    //    implementation project(':view_quick_sgzn')
+//    implementation project(':view_quick_ltcj')
+//    implementation project(':view_quick_sgzry')
+    //    implementation project(':view_ziyouios_gcsg')
+//    implementation project(':view_maoer_djs')
+//    implementation project(':view_44755_bzsg')
+    implementation project(':tencent_x5')
+}

@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ededed"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/pay_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:gravity="center"
+                    android:text="@string/ledi_back_game"
+                    android:textColor="#000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/ledi_payment_center"
+                    android:textColor="#FF8040"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 乐币充值相关 -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:visibility="gone"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/float_window_ledi_balance_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/float_window_ledi_balance"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/title_font_medium" />
+
+                    <TextView
+                        android:id="@+id/float_window_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="@dimen/title_font_medium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/float_window_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#000000"
+                        android:textSize="@dimen/title_font_medium" />
+                </LinearLayout>
+                <!-- 充值乐币 -->
+
+                <TextView
+                    android:id="@+id/ledi_g_buy_recharge_text_rechargelebi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:visibility="gone"
+                    android:text="@string/ledi_recharge_lebi"
+                    android:textColor="@color/float_window_blue"
+                    android:textSize="@dimen/title_font_medium" />
+                <!--
+        <Button
+            android:id="@+id/ledi_g_buy_recharge_discount_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/ledi_money_list_down"
+            android:onClick="discountlist" />
+                -->
+            </LinearLayout>
+            <!-- 支付详情：价格名称 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/pay_shangping"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center_vertical"
+                        android:text="元宝"
+                        android:textColor="#272727"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/shangpin_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="商品名称:"
+                        android:textColor="#808080"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center_vertical"
+                        android:text="元"
+                        android:textColor="#272727"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/info_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toLeftOf="@+id/textView2"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="#FF8040"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/shangpin_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="价       格 :"
+                        android:textColor="#808080"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/info_goods_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="19dp"
+                        android:gravity="center_vertical"
+                        android:text=" 元宝"
+                        android:textColor="#272727"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/info_goods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toLeftOf="@+id/info_goods_name"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#FF8040"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/info_title_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="23dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="商品总计:"
+                        android:textColor="#808080"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <!-- 各种支付信息 -->
+
+
+                <!-- 支付宝 -->
+
+                <RelativeLayout
+                    android:id="@+id/lift_zhifubao"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                         />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/imageView1"
+                        android:text="@string/ledi_zhifubao"
+                        android:textColor="#272727"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/lift_zhifubao_img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="18dp"
+                        android:onClick="left_onclick2"
+                         />
+                </RelativeLayout>
+
+                <!-- 微信 -->
+
+                <RelativeLayout
+                    android:id="@+id/lift_weixin"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                         />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/imageView2"
+                        android:text="@string/ledi_weixin"
+                        android:textColor="#272727"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/lift_weixin_img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="18dp"
+                        android:onClick="left_onclick2" />
+                </RelativeLayout>
+                <!-- 更多支付方式 -->
+
+                <TextView
+                    android:id="@+id/pay_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/ledi_pay_more"
+                    android:textColor="#66B3FF"
+                    android:textSize="15sp" />
+                <!-- 储蓄卡 -->
+
+                <RelativeLayout
+                    android:id="@+id/lift_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/imageView3"
+                        android:text="@string/ledi_debit"
+                        android:textColor="#272727"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/lift_chuxuka_img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="18dp"
+                        android:onClick="left_onclick2"/>
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/textView1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="5dp" />
+                </RelativeLayout>
+
+                <!-- 信用卡 -->
+
+                <RelativeLayout
+                    android:id="@+id/lift_xinyong_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/imageView4"
+                        android:text="@string/ledi_credit"
+                        android:textColor="#272727"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/lift_xinyong_card_img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="18dp"
+                        android:onClick="left_onclick2" />
+                </RelativeLayout>
+                <!-- 乐币 -->
+
+                <RelativeLayout
+                    android:id="@+id/lift_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/imageView5"
+                        android:text="@string/ledi_roof"
+                        android:textColor="#272727"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/lift_info_img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="18dp"
+                        android:onClick="left_onclick2" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignTop="@+id/lift_info_img"
+                        android:layout_marginLeft="5dp" />
+                </RelativeLayout>
+            </LinearLayout>
+<!-- 收起 
+            <TextView
+                android:id="@+id/pay_more2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="@string/ledi_pay_more2"
+                android:textColor="#66B3FF"
+                android:textSize="15sp" />
+-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="35dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/pay_sure"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#FF5809"
+                    android:onClick="bootomBtnOnclick"
+                    android:text="@string/ledi_zhifu" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

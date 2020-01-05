@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">HeiBang_Game</string>
+
+    <string name="setting_key_mobile_network_play">mobile_network_play</string>
+    <string name="setting_key_mobile_network_download">mobile_network_download</string>
+    <string name="setting_key_sound_effect">sound_effect</string>
+    <string name="setting_key_filter_size">filter_size</string>
+    <string name="setting_key_filter_time">filter_time</string>
+    <string name="exit_game_des">确定要退出游戏吗?</string>
+    <string name="exit_game">确认退出</string>
+    <string name="game_exit">退出游戏</string>
+    <string name="cancel">取  消</string>
+    <string name="logo">logo</string>
+    <string name="open_wifi_setting">打开设置</string>
+    <string name="open_wifi_des">网络连接错误,打开WIFI设置页面</string>
+</resources>

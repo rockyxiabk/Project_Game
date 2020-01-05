@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/float_window_grey"
+    android:orientation="vertical"
+   
+    android:paddingTop="10dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageSwitcher
+            android:layout_width="9dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/ledi_register_phone_img1" />
+
+        <EditText
+            android:id="@+id/float_window_account_edittext_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginLeft="11dp"
+            android:layout_weight="24"
+            android:background="@null"
+            android:hint="@string/ledi_input_password2"
+            android:paddingRight="10dp"
+            android:textColorHint="@color/float_window_hint_grey"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#CBCBCB" />
+
+    <!-- 绑定成功后隐藏 -->
+
+    <LinearLayout
+        android:id="@+id/float_window_account_layout_msg_identifycode"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageSwitcher
+            android:layout_width="18dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/ledi_register_phone_img" />
+
+        <EditText
+            android:id="@+id/float_window_account_edittext_msg_identify_code"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_marginLeft="11dp"
+            android:layout_weight="24"
+            android:background="@null"
+            android:hint="@string/ledi_input_identify_code"
+            android:paddingRight="10dp"
+            android:textColorHint="@color/float_window_hint_grey"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/float_window_account_button_get_identify_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:text="获取验证码"
+            android:textColor="#FF9200"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#CBCBCB" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/float_window_textview_account_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="111"
+            android:textColor="@color/float_window_black"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/float_window_edittextbg_yellow"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@null"
+                    android:gravity="left|center"
+                    android:hint="@string/float_window_hint_identify_code"
+                    android:textColor="@color/float_window_black"
+                    android:textColorHint="@color/float_window_hint_grey"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/float_window_account_bond_phone_btn_sure"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ledi_login_selector"
+        android:text="确定"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/float_window_account_bond_phone_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/float_window_text_bindforfindpwd"
+        android:textSize="17sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/float_window_account_bond_phone_btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/float_window_btn_cancel_selector"
+            android:gravity="center"
+            android:text="@string/float_window_cancel"
+            android:textColor="@color/float_window_white"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

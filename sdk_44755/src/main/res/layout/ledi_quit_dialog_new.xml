@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/img_concel"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/ledi_quit_dialog_title"
+        android:gravity="center"
+        android:text="试试其他游戏好玩的游戏"
+        android:textColor="#606060"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ledi_quit_dialog_bg2"
+        android:orientation="vertical"
+        android:gravity="center" >
+      <com.ledi.util.HorizontalListView 
+          android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:id="@+id/listview"
+            android:horizontalSpacing="2dp"
+            ></com.ledi.util.HorizontalListView>
+       
+
+        <Button
+            android:id="@+id/quit"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ledi_login_selector"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:textColor="#ffffff"
+            android:text="忍心退出" />
+    </LinearLayout>
+
+</LinearLayout>
